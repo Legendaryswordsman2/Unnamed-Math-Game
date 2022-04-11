@@ -8,15 +8,10 @@ using System.Data;
 public class ConsecutiveMathGame : MonoBehaviour
 {
 	[SerializeField] TMP_Text mathQuestionText;
-
-	// Current Question
-	[SerializeField, ReadOnlyInspector] int firstNumber;
-	[SerializeField, ReadOnlyInspector] string operation;
-	[SerializeField, ReadOnlyInspector] int secondNumber;
+	[SerializeField] GameObject correctAnswerScreen;
+	[SerializeField] GameObject wrongAnswerScreen;
 
 	[SerializeField] string currentQuestion;
-
-	[SerializeField] List<char> temp;
 
 	[SerializeField, ReadOnlyInspector] double result;
 	private void Awake()
@@ -27,6 +22,11 @@ public class ConsecutiveMathGame : MonoBehaviour
 
 
 		result = Evaluate(currentQuestion);
+	}
+	public void SetAnswer(double answer)
+	{
+		//if(answer == result)
+
 	}
 	void SetNewOperation()
 	{
