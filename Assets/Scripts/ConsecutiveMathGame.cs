@@ -49,7 +49,22 @@ public class ConsecutiveMathGame : MonoBehaviour
 
 	string GetRandomOperation()
 	{
-		return "+";
+		int temp = UnityEngine.Random.Range(0, 4);
+
+		switch (temp)
+		{
+			case (0):
+				return "+";
+			case (1):
+				return "-";
+			case (2):
+				return "*";
+			case (3):
+				return "/";
+			default:
+				Debug.LogError("Random Not in range");
+				return "+";
+		}
 	}
 	public static double Evaluate(string expression)
 	{
