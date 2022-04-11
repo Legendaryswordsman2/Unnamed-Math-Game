@@ -38,8 +38,8 @@ public class ConsecutiveMathGame : MonoBehaviour
 	}
 	void SetNewOperation()
 	{
-		currentQuestion = UnityEngine.Random.Range(1, 21) + " " + GetRandomOperation() + " " + UnityEngine.Random.Range(1, 21);
-
+		currentQuestion = result + " " + GetRandomOperation() + " " + UnityEngine.Random.Range(1, 21);
+		
 		mathQuestionText.text = currentQuestion + " =";
 
 		result = Evaluate(currentQuestion);
